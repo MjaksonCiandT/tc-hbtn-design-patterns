@@ -57,7 +57,7 @@ public class Pedido {
         StringBuilder itensForaDaCaixa = new StringBuilder("\tFora da Caixa:\n");
         StringBuilder itensDentroDaCaixa = new StringBuilder("\tDentro da Caixa:\n");
 
-        //getItensForaCaixa().stream().sorted(new ItemPedido()).forEach(itemPedido -> itensForaDaCaixa.append(String.format("\t\t- %s %s\n", itemPedido.getTipo(), itemPedido.getNome())));
+        getItensForaCaixa().stream().sorted(new ItemPedido()).forEach(itemPedido -> itensForaDaCaixa.append(String.format("\t\t- %s %s\n", itemPedido.getTipo(), itemPedido.getNome())));
         getItensDentroCaixa().stream().sorted(new ItemPedido()).forEach(itemPedido -> itensDentroDaCaixa.append(String.format("\t\t- %s %s\n", itemPedido.getTipo(), itemPedido.getNome())));
 
         return itensForaDaCaixa + itensDentroDaCaixa.toString();
